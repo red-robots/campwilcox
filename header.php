@@ -28,20 +28,43 @@
 		<div class="wrapper">
 			
 			<?php if(is_home()) { ?>
-	            <h1 class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+	            <h1 class="logo col-1">
+	            <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 	            </h1>
 	        <?php } else { ?>
-	            <div class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+	            <div class="logo col-1">
+	            <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 	            </div>
 	        <?php } ?>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation col-2" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
-	</div><!-- wrapper -->
+			<div class="numbers col-3">
+				<?php $phone_1 = get_field("phone_1","option");
+				$phone_1_pre = get_field("phone_1_pre","option");
+				$phone_2 = get_field("phone_2","option");
+				$phone_2_pre = get_field("phone_2_pre","option");
+				$fax_pre = get_field("fax_pre","option");
+				$fax = get_field("fax","option");
+				if($phone_1&&$phone_1_pre):?>
+					<div class="phone-1">
+						<?php echo $phone_1_pre.$phone_1;?>
+					</div><!--.fax-->
+				<?php endif;
+				if($phone_2&&$phone_2_pre):?>
+					<div class="phone-2">
+						<?php echo $phone_2_pre.$phone_2;?>
+					</div><!--.fax-->
+				<?php endif;
+				if($fax&&$fax_pre):?>
+					<div class="fax">
+						<?php echo $fax_pre.$fax;?>
+					</div><!--.fax-->
+				<?php endif;?>
+			</div><!--.numbers-->
+		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content wrapper">

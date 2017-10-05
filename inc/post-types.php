@@ -8,18 +8,18 @@ function js_custom_init()
 	// Register the Homepage Slides
   
      $labels = array(
-	'name' => _x('Slides', 'post type general name'),
-    'singular_name' => _x('Slide', 'post type singular name'),
-    'add_new' => _x('Add New', 'Slide'),
-    'add_new_item' => __('Add New Slide'),
-    'edit_item' => __('Edit Slides'),
-    'new_item' => __('New Slide'),
-    'view_item' => __('View Slides'),
-    'search_items' => __('Search Slides'),
-    'not_found' =>  __('No Slides found'),
-    'not_found_in_trash' => __('No Slides found in Trash'), 
+	'name' => _x('Team', 'post type general name'),
+    'singular_name' => _x('Member', 'post type singular name'),
+    'add_new' => _x('Add New', 'Member'),
+    'add_new_item' => __('Add New Member'),
+    'edit_item' => __('Edit Member'),
+    'new_item' => __('New Member'),
+    'view_item' => __('View Member'),
+    'search_items' => __('Search Members'),
+    'not_found' =>  __('No Members found'),
+    'not_found_in_trash' => __('No Members found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => 'Slides'
+    'menu_name' => 'Team'
   );
   $args = array(
 	'labels' => $labels,
@@ -36,7 +36,7 @@ function js_custom_init()
     'supports' => array('title','editor','custom-fields','thumbnail'),
 	
   ); 
-  register_post_type('slides',$args); // name used in query
+  register_post_type('team',$args); // name used in query
   
   // Add more between here
   

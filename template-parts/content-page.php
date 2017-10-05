@@ -9,33 +9,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'acstarter' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'acstarter' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background-image:url(<?php echo get_template_directory_uri()."/images/large-clock.png";?>);">
+	<section class="col-1">
+		<header><h1><?php the_title();?></h1></header>
+		<div class="copy">
+			<?php the_content();?>
+		</div><!--.copy-->
+	</section><!--.col-1-->
+	<?php get_template_part("template-parts/content","boxes");?>
 </article><!-- #post-## -->
