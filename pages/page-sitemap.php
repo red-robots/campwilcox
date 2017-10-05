@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Bio
+ * Template Name: Sitemap
  */
 
 get_header(); ?>
@@ -11,7 +11,7 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+				get_template_part( 'template-parts/content', 'sitemap' );
 
 			endif; // End of the loop.
 			?>
