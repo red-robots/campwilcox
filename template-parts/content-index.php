@@ -16,7 +16,10 @@
 				<?php $title = get_field("row_1_title");
 				$copy = get_field("row_1_copy");
 				if($title):?>
-					<header><h2><?php echo $title;?></h2></header>
+					<header>
+						<h2><?php echo $title;?></h2>
+						<div class="spacer"></div><!--.spacer-->	
+					</header>
 				<?php endif;
 				if($copy):?>
 					<div class="copy">
