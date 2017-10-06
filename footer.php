@@ -15,10 +15,14 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="row-1">
-			<img src="<?php echo get_template_directory_uri()."/images/small-clock.png";?>" alt="clock">
+			<div class="wrapper cap">
+				<img src="<?php echo get_template_directory_uri()."/images/small-clock.png";?>" alt="clock">
+			</div><!--.wrapper-->
 		</div><!--.row-1-->
 		<div class="row-2">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+			<div class="wrapper cap">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+			</div><!--.wrapper-->
 		</div><!--.row-2-->
 		<?php $disclaimer_row_1 = get_field("disclaimer_row_1","option");
 		$disclaimer_col_1 = get_field("disclaimer_col_1","option");
@@ -26,36 +30,40 @@
 		$disclaimer_col_3 = get_field("disclaimer_col_3","option");?>
 		<?php if($disclaimer_row_1||$disclaimer_col_1||$disclaimer_col_2||$disclaimer_col_3):?>
 			<div class="row-3">
-				<?php if($disclaimer_row_1):?>
-					<div class="row-1">
-						<?php echo $disclaimer_row_1;?>
-					</div><!--.row-1-->
-				<?php endif;
-				if($disclaimer_col_1||$disclaimer_col_2||$disclaimer_col_3):?>
-					<div class="row-2">
-						<?php if($disclaimer_col_1):?>
-							<div class="col-1">
-								<?php echo $disclaimer_col_1;?>
-							</div><!--.col-1-->
-						<?php endif;
-						if($disclaimer_col_2):?>
-							<div class="col-2">
-								<?php echo $disclaimer_col_2;?>
-							</div><!--.col-2-->
-						<?php endif;
-						if($disclaimer_col_3):?>
-							<div class="col-3">
-								<?php echo $disclaimer_col_3;?>
-							</div><!--.col-3-->
-						<?php endif;?>
-					</div><!--.row-2-->
-				<?php endif;?>
+				<div class="wrapper cap">
+					<?php if($disclaimer_row_1):?>
+						<div class="row-1">
+							<?php echo $disclaimer_row_1;?>
+						</div><!--.row-1-->
+					<?php endif;
+					if($disclaimer_col_1||$disclaimer_col_2||$disclaimer_col_3):?>
+						<div class="row-2">
+							<?php if($disclaimer_col_1):?>
+								<div class="col-1">
+									<?php echo $disclaimer_col_1;?>
+								</div><!--.col-1-->
+							<?php endif;
+							if($disclaimer_col_2):?>
+								<div class="col-2">
+									<?php echo $disclaimer_col_2;?>
+								</div><!--.col-2-->
+							<?php endif;
+							if($disclaimer_col_3):?>
+								<div class="col-3">
+									<?php echo $disclaimer_col_3;?>
+								</div><!--.col-3-->
+							<?php endif;?>
+						</div><!--.row-2-->
+					<?php endif;?>
+				</div><!--.wrapper-->
 			</div><!--.row-3-->
 		<?php endif;?>
 		<?php $copyright = get_field("copyright","option");
 		if($copyright):?>
 			<div class="row-4">
-				<?php echo $copyright;?>
+				<div class="wrapper cap">
+					<?php echo $copyright;?>
+				</div><!--.wrapper-->
 			</div><!--.row-4-->
 		<?php endif;?>
 	</footer><!-- #colophon -->

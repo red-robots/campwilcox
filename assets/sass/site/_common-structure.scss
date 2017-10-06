@@ -1,0 +1,129 @@
+
+.clear-bottom {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.cap {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.copy {
+  font-size: 14px;
+  color: $color__text-main;
+  @media screen and (min-width: $tabwidth){
+    font-size: 16px;
+  }
+  > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  p {
+    margin: 20px 0;
+  }
+  strong, b, em {
+    font-weight: 800;
+  }
+  a {
+    text-decoration: none;
+    color: $color__text-main;
+    position: relative;
+    &:hover {
+      color: $color__text-main;
+      text-decoration: underline;
+    }
+  }
+  h1, h2, h3 {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: $color__text-main;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  ul, ol {
+    padding: 0;
+    margin: 0 0 20px 20px;
+    font-size: inherit;
+    li {
+      margin: 0;
+      font-size: inherit;
+      padding: 0;
+      list-style-type: none;
+      text-indent: -14px;
+      &:before {
+        content: "\25A0";
+        color: $color__text-main;
+        margin-right: 5px;
+      }
+      a {
+        cursor: pointer;
+        &:hover {
+          color: $color__text-main;
+        }
+      }
+      ul.sub-menu {
+        margin: 0;
+      }
+    }
+  }
+}
+#masthead {
+    >.wrapper {
+
+    }
+}
+<header id="masthead" class="site-header" role="banner">
+<div class="wrapper">
+    
+    <?php if(is_home()) { ?>
+        <h1 class="logo col-1">
+        <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
+        </h1>
+    <?php } else { ?>
+        <div class="logo col-1">
+        <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
+        </div>
+    <?php } ?>
+
+    <nav id="site-navigation" class="main-navigation col-2" role="navigation">
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+    </nav><!-- #site-navigation -->
+    <div class="numbers col-3">
+        <?php $phone_1 = get_field("phone_1","option");
+        $phone_1_pre = get_field("phone_1_pre","option");
+        $phone_2 = get_field("phone_2","option");
+        $phone_2_pre = get_field("phone_2_pre","option");
+        $fax_pre = get_field("fax_pre","option");
+        $fax = get_field("fax","option");
+        if($phone_1&&$phone_1_pre):?>
+            <div class="phone-1">
+                <?php echo $phone_1_pre.$phone_1;?>
+            </div><!--.fax-->
+        <?php endif;
+        if($phone_2&&$phone_2_pre):?>
+            <div class="phone-2">
+                <?php echo $phone_2_pre.$phone_2;?>
+            </div><!--.fax-->
+        <?php endif;
+        if($fax&&$fax_pre):?>
+            <div class="fax">
+                <?php echo $fax_pre.$fax;?>
+            </div><!--.fax-->
+        <?php endif;?>
+    </div><!--.numbers-->
+</div><!-- wrapper -->
+</header><!-- #masthead -->
