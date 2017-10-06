@@ -67,16 +67,6 @@ jQuery(document).ready(function ($) {
 
 	/*
 	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
-	
-	
-	/*
-	*
 	*	Equal Heights Divs
 	*
 	------------------------------------*/

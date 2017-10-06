@@ -32,24 +32,24 @@
 			<div class="row-3">
 				<div class="wrapper cap">
 					<?php if($disclaimer_row_1):?>
-						<div class="row-1">
+						<div class="row-1 copy">
 							<?php echo $disclaimer_row_1;?>
 						</div><!--.row-1-->
 					<?php endif;
 					if($disclaimer_col_1||$disclaimer_col_2||$disclaimer_col_3):?>
 						<div class="row-2">
 							<?php if($disclaimer_col_1):?>
-								<div class="col-1">
+								<div class="col-1 copy">
 									<?php echo $disclaimer_col_1;?>
 								</div><!--.col-1-->
 							<?php endif;
 							if($disclaimer_col_2):?>
-								<div class="col-2">
+								<div class="col-2 copy">
 									<?php echo $disclaimer_col_2;?>
 								</div><!--.col-2-->
 							<?php endif;
 							if($disclaimer_col_3):?>
-								<div class="col-3">
+								<div class="col-3 copy">
 									<?php echo $disclaimer_col_3;?>
 								</div><!--.col-3-->
 							<?php endif;?>
@@ -61,7 +61,7 @@
 		<?php $copyright = get_field("copyright","option");
 		if($copyright):?>
 			<div class="row-4">
-				<div class="wrapper cap">
+				<div class="wrapper cap copy">
 					<?php echo $copyright;?>
 				</div><!--.wrapper-->
 			</div><!--.row-4-->

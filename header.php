@@ -50,17 +50,17 @@
 				$fax = get_field("fax","option");
 				if($phone_1&&$phone_1_pre):?>
 					<div class="phone-1">
-						<?php echo $phone_1_pre.$phone_1;?>
+						<?php echo $phone_1_pre.'&nbsp;'.$phone_1;?>
 					</div><!--.fax-->
 				<?php endif;
 				if($phone_2&&$phone_2_pre):?>
 					<div class="phone-2">
-						<?php echo $phone_2_pre.$phone_2;?>
+						<?php echo $phone_2_pre.'&nbsp;'.$phone_2;?>
 					</div><!--.fax-->
 				<?php endif;
 				if($fax&&$fax_pre):?>
 					<div class="fax">
-						<?php echo $fax_pre.$fax;?>
+						<?php echo $fax_pre.'&nbsp;'.$fax;?>
 					</div><!--.fax-->
 				<?php endif;?>
 			</div><!--.numbers-->
