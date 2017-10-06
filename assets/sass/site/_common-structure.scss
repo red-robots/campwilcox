@@ -110,7 +110,7 @@
         >.col-2#site-navigation {
             width: 100%;
             @include flexbox-flex(1,1,auto);
-            margin: 0 0 10px 0;
+            margin: 10px 0;
             text-align: center;
             @media screen and (min-width: $tabwidth){
                 margin: 0;
@@ -126,6 +126,8 @@
                 background: transparent;
                 color: $color__cw-blue;
                 text-transform: uppercase;
+                text-shadow: none;
+                box-shadow: none;
                 padding: 10px;
                 width: 200px;
                 @media screen and (min-width: $tabwidth){
@@ -303,7 +305,6 @@
     }
 }
 .boxes {
-    padding: 20px;
     @include flexbox();
     @include flexbox-justify(center);
     @include flexbox-align-content(center);
@@ -318,7 +319,7 @@
             margin: 0;
         }
         header {
-            padding: 0 20px 10px 20px;
+            padding: 0 30px 30px 30px;
             h2 {
                 font-size: 25px;
                 color: $color__cw-brown;

@@ -50,6 +50,9 @@
                 }
             }
         }
+        >.boxes {
+            padding: 20px 20px 0 20px;
+        }
         @media screen and (min-width: $midwidth){
             >.boxes {
                 @include flexbox-justify(space-between);
@@ -67,6 +70,7 @@
                     @include flexbox-wrap(nowrap);
                     @include flexbox-direction(column);
                     header {
+                        padding: 0 20px 10px 20px;
                         @include flexbox();
                         @include flexbox-justify(center);
                         @include flexbox-align-content(stretch);
@@ -90,6 +94,133 @@
                         }
                         .more {
                             margin-top: auto;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.error-404,.template-page,.template-sitemap {
+    background-color: $color__cw-cream;
+    background-position-x: -150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    >.wrapper {
+        padding: 20px 20px 0 20px;
+        @media screen and (min-width: $midwidth){
+            padding: 10% 5% 0 5%;
+        }
+        >.col-1 {
+            @media screen and (min-width: $midwidth){
+                float: left;
+                width: 65%;
+                padding: 0 5% 0 0;
+            }
+            header {
+                h1 {
+                    margin: 0 0 20px 0;
+                    font-size: 30px;
+                    font-weight: 300;
+                    color: $color__cw-brown;
+                    @media screen and (min-width: $midwidth){
+                        font-size: 40px;
+                    }
+                }
+            }
+            .copy {
+
+            }
+        }
+        .boxes {
+            @media screen and (min-width: $midwidth){
+                float: left;
+                width: 35%;
+                padding: 0 0 0 5%;
+            }
+        }
+    }
+}
+.template-bio {
+    background-color: $color__cw-cream;
+    background-position-x: -150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    >.wrapper {
+        padding: 20px 20px 0 20px;
+        @media screen and (min-width: $midwidth){
+            padding: 10% 0 0 0;
+        }
+        >header {
+            padding: 0 20px;
+            @media screen and (min-width: $midwidth){
+                padding: 0 6.32%;
+            }
+            h1 {
+                margin: 0;
+                font-size: 30px;
+                font-weight: 300;
+                color: $color__cw-brown;
+                @media screen and (min-width: $midwidth){
+                    font-size: 40px;
+                    margin: 0 0 5% 0;
+                }
+            }
+        }
+        >.wrapper {
+            @media screen and (min-width: $midwidth){
+                padding: 0 2%;
+            }
+            #container {
+                .item {
+                    padding: 0 0 60px 0;
+                    @media screen and (min-width: $midwidth){
+                        width: 50%;
+                        padding: 0 4.5% 60px 4.5%;
+                    }
+                    >.col-1 {
+                        width: 80%;
+                        margin: 0 auto 10px auto;
+                        border-bottom: 4px solid $color__cw-brown;
+                        @media screen and (min-width: $tabwidth){
+                            width: 30%;
+                            float: left;
+                            margin: 0;
+                        }
+                        img {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                    >.col-2 {
+                        padding: 20px 20px 30px 20px;
+                        background-color: white;
+                        border-bottom: 4px solid $color__cw-brown;
+                        @media screen and (min-width: $tabwidth){
+                            width: 70%;
+                            float: left;
+                            margin: 0;
+                        }
+                        header {
+                            h2 {
+                                font-size: 25px;
+                                color: $color__cw-brown;
+                                margin: 0 0 10px 0;
+                                font-weight: 300;
+                                @media screen and (min-width: $tabwidth){
+                                    font-size: 30px;
+                                }
+
+                            }
+                            .title {
+                                margin: 0 0 10px 0;
+                                color: black;
+                                font-size: 16px;
+                            }
+                        }
+                        .copy {
+                            font-size: 16px;
 
                         }
                     }

@@ -12,8 +12,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<article class="error-404 not-found">
-				<div class="wrapper cap">
+			<article class="error-404 not-found" style="background-image:url(<?php echo get_template_directory_uri()."/images/large-clock.png";?>);">
+				<div class="wrapper cap clear-bottom">
 					<section class="col-1">
 						<header class="page-header">
 							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'acstarter' ); ?></h1>

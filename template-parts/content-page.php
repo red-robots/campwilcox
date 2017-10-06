@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-page"); ?> style="background-image:url(<?php echo get_template_directory_uri()."/images/large-clock.png";?>);">
-	<div class="wrapper cap">
+	<div class="wrapper cap clear-bottom">
 		<section class="col-1">
 			<header><h1><?php the_title();?></h1></header>
 			<div class="copy">
