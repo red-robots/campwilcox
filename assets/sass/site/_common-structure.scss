@@ -302,3 +302,77 @@
         }
     }
 }
+.boxes {
+    padding: 20px;
+    @include flexbox();
+    @include flexbox-justify(center);
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(center);
+    @include flexbox-wrap(nowrap);
+    @include flexbox-direction(column);
+    >.box {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 40px 0;
+        &:last-child {
+            margin: 0;
+        }
+        header {
+            padding: 0 20px 10px 20px;
+            h2 {
+                font-size: 25px;
+                color: $color__cw-brown;
+                margin: 0;
+                font-weight: 300;
+                @media screen and (min-width: $tabwidth){
+                    font-size: 30px;
+                }
+            }
+        }
+        >.wrapper {
+            background-color: white;
+            .links {
+                border-top: 2px solid $color__cw-brown;
+                padding: 30px 20px 0 20px;
+                .link {
+                    margin: 0 0 10px 0;
+                    &:last-child {
+                        margin: 0;
+                    }
+                    a {
+                        font-size: 20px;
+                        margin: 0;
+                        font-weight: 300;
+                        text-decoration: none;
+                        color: $color__text-main;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 25px;
+                        }
+                        &:hover {
+                            color: $color__text-main;
+                        }
+                    }
+                }
+            }
+            .more {
+                padding: 50px 20px 20px 20px;
+                a {
+                    border: 1px solid $color__cw-brown;
+                    color: $color__cw-brown;
+                    padding: 5px;
+                    text-decoration: none;
+                    display: block;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: $color__cw-brown;
+                    }
+                    >.wrapper {
+                        border: 1px solid $color__cw-brown;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
