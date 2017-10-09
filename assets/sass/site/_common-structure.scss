@@ -116,7 +116,7 @@
                 margin: 0;
             }
             &.toggled {
-                #primary-menu {
+                .menu-main-primary-menu-container {
                     display: block;
                 }
             }
@@ -134,7 +134,7 @@
                     display: none;
                 }
             }
-            #primary-menu {
+            .menu-main-primary-menu-container {
                 display: none;
                 @media screen and (min-width: $tabwidth){
                     display: block;
@@ -145,8 +145,14 @@
                     li {
                         display: block;
                         margin: 10px 0;
+                        position: relative;
                         &:last-child {
                             margin-bottom: 0;
+                        }
+                        &:hover {
+                            .sub-menu {
+                                display: block;
+                            }
                         }
                         @media screen and (min-width: $tabwidth){
                             display: inline-block;
@@ -166,7 +172,29 @@
                             }
                         }
                         .sub-menu {
-                            display: none;
+                            @media screen and (min-width: $tabwidth){
+                                display: none;
+                                position: absolute;
+                                padding: 10px;
+                                top: 100%;
+                                left: 0;
+                                width: 200px;
+                                z-index: 2;
+                                background-color: white;
+                                border-top: 2px solid $color__cw-brown;
+                                border-bottom: 2px solid $color__cw-brown;
+                            }
+                            li {
+                                @media screen and (min-width: $tabwidth){
+                                    display: block;
+                                    margin: 5px 0;
+                                }
+                                a {
+                                    @media screen and (min-width: $tabwidth){
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
