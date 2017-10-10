@@ -47,6 +47,9 @@ jQuery(document).ready(function ($) {
 		$container.isotope({
 			// options
 			itemSelector: '.item',
+			masonry: {
+				gutter: 0
+			}
  		 });
 	});
 
