@@ -1497,7 +1497,7 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:900px){.template-bio>.wrapper>header h1{font-size:40px;margin:0 0 5% 0}
 }@media screen and (min-width:900px){.template-bio>.wrapper>.wrapper{padding:0 2%}
 }.template-bio>.wrapper>.wrapper #container .item{padding:0 0 60px 0}
-@media screen and (min-width:900px){.template-bio>.wrapper>.wrapper #container .item{width:50%;padding:0 4.5% 60px 4.5%}
+@media screen and (min-width:900px){.template-bio>.wrapper>.wrapper #container .item{width:49.5%;padding:0 4.5% 60px 4.5%}
 }.template-bio>.wrapper>.wrapper #container .item>.col-1{width:80%;margin:0 auto 10px auto;border-bottom:4px solid #a95b1b}
 @media screen and (min-width:600px){.template-bio>.wrapper>.wrapper #container .item>.col-1{width:30%;float:left;margin:0}
 }.template-bio>.wrapper>.wrapper #container .item>.col-1 img{width:100%;display:block}
