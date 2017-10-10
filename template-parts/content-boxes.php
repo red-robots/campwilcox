@@ -13,7 +13,7 @@ if($boxes):?>
                             <div class="links">
                                 <?php foreach($box['links'] as $link):?>
                                     <div class="link">
-                                        <a href="<?php echo $link['link'];?>">
+                                        <a href="<?php echo $link['link'];?>" target="_blank">
                                             <?php echo $link['link_text'];?>
                                         </a>
                                     </div><!--.link-->
@@ -22,7 +22,7 @@ if($boxes):?>
                         <?php endif;?>
                         <?php if($box['more_link']&&$box['more_text']):?>
                             <div class="more">
-                                <a href="<?php echo $box['more_link'];?>">
+                                <a href="<?php echo $box['more_link'];?>" target="_blank">
                                     <div class="wrapper">
                                         <?php echo $box['more_text'];?>
                                     </div><!--.wrapper-->

@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-index"); ?>>
 	<div class="wrapper cap">
-		<section class="row-1">
+		<section class="row-1 clear-bottom">
 			<div class="col-1">
 				<?php $title = get_field("row_1_title");
 				$copy = get_field("row_1_copy");

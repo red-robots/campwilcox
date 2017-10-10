@@ -3,21 +3,15 @@
     >.wrapper {
         >.row-1 {
             padding: 20px;
-            @include flexbox();
-            @include flexbox-justify(center);
-            @include flexbox-align-content(center);
-            @include flexbox-align-items(center);
-            @include flexbox-wrap(nowrap);
-            @include flexbox-direction(column);
             @media screen and (min-width: $tabwidth){
-                @include flexbox-justify(space-between);
-                @include flexbox-direction(row);
                 padding: 4% 10%;
             }
             >.col-1 {
                 width: 100%;
                 @media screen and (min-width: $tabwidth){
                     width: 50%;
+                    float: left;
+                    padding: 60px 0 0 0;
                 }
                 header {
                     margin: 0 0 40px 0;
@@ -43,6 +37,7 @@
                 width: 100%;
                 @media screen and (min-width: $tabwidth){
                     width: 50%;
+                    float: left;
                 }
                 img {
                     display: block;
